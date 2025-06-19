@@ -47,6 +47,21 @@
   margin: 0 auto;
 }
 
+/* .word,
+.letter {
+  display: inline-block;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+
+.anime-text, .anime-header {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.4;
+} */
+
+
 /* Dark mode overrides */
 
 /* Satoshi Font Faces (using .ttf from /public/fonts/WEB/fonts/) */
