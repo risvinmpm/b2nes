@@ -1,0 +1,299 @@
+.advantage-contents {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.advantage-contents h2 {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.advantage-contents p {
+  font-weight: 400;
+  max-width: 620px;
+  text-align: center;
+}
+.advantage-contents {
+  margin-bottom: 50px;
+}
+
+.advantages {
+  position: relative;
+  padding: 5rem 0rem;
+}
+
+/* Enhance GlassIcons visibility */
+.glass-icons-container {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-container {
+  transition: transform 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+/* Marquee adjustments */
+/* .marquee-container {
+  overflow-x: visible;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center bottom;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.flip-card:focus {
+  outline: 0;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Add this for iOS Safari */
+}
+
+.flip-card-front {
+  /* background: linear-gradient(to left, #4364f7, #6fb1fc); */
+  background: radial-gradient(
+      79.28% 65.91% at 95.98% 0%,
+      #1e293b 0%,
+      #0f172a 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flip-card-back {
+  /* background: linear-gradient(to right, #4364f7, #6fb1fc); */
+  background: radial-gradient(
+      79.28% 65.91% at 95.98% 0%,
+      #1e293b 0%,
+      #0f172a 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  /* padding: 0px 15px; */
+  padding: 0px 50px;
+}
+
+/* advantage.css */
+.custom-marquee {
+  padding: 2rem 0 !important;
+}
+
+.marquee-item {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Ensure cards maintain fixed dimensions */
+
+.flip-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  /* Optional: Add shadow for depth */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.flip-card-inner {
+  /* ... existing styles ... */
+  transition: transform 0.6s, box-shadow 0.3s;
+}
+
+/* Optional: Add subtle animation to back card */
+.flip-card-back {
+  transition: transform 0.6s, opacity 0.3s;
+}
+
+/* For better performance */
+.flip-card {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.shade-img {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  right: 0px;
+}
+.flip-card:hover .shade-img,
+.flip-card:focus .shade-img {
+  display: none;
+}
+.shade-img-bottom {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  display: none;
+}
+.flip-card:hover .shade-img-bottom,
+.flip-card:focus .shade-img-bottom {
+  display: block; /* Show on hover/focus */
+}
+.flip-card-front h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+}
+
+/* slider */
+.swiper-container {
+  position: relative;
+  width: 100%;
+  padding: 0 0px;
+}
+
+.mobile-swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+.swiper-slide {
+  overflow: visible !important;
+}
+.swiper-container,
+.swiper-wrapper {
+  overflow: visible !important;
+}
+.swiper-slide {
+  transform: none !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 14px !important;
+  color: #fff;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .flip-card-front h2 {
+    font-size: 26px;
+  }
+  .advantage-contents h2 {
+    font-size: 26px;
+  }
+  .flip-card {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+  }
+}

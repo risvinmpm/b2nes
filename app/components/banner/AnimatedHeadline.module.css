@@ -1,0 +1,29 @@
+.heading {
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.dropIn {
+  display: inline-block;
+  opacity: 0;
+  animation-name: dropIn;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -60vh, 0);
+  }
+  75% {
+    opacity: 1;
+    transform: translate3d(0, 1.5vh, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

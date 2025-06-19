@@ -1,0 +1,159 @@
+.features-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.key-features {
+  padding: 5rem 0rem;
+}
+
+.features-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.feature-gap {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+.feature-animate canvas {
+  width: 500px;
+}
+
+.featur-animation {
+  position: relative;
+}
+
+.mob-feature-item {
+  border-bottom: 1px solid #ededed2e;
+  padding: 20px 0;
+}
+
+.mob-feature-subtext {
+  font-weight: 400;
+}
+
+.mob-Features {
+  display: none;
+}
+
+.orb-text {
+  color: #fff;
+  position: absolute;
+  top: 66px;
+  z-index: 99;
+  left: 29%;
+  text-align: center;
+}
+
+.orb-text h2 {
+  font-weight: 700;
+  font-size: 30px;
+  max-width: 260px;
+  padding-bottom: 10px;
+}
+
+.orb-text p {
+  font-weight: 400;
+  max-width: 330px;
+  font-size: 15px;
+}
+
+.sign-up-btn {
+  margin-top: 100px;
+  /* padding-left: 90px; */
+  display: flex;
+}
+
+/* Make the orb section sticky on desktop */
+@media (min-width: 769px) {
+  .featur-animation {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 576px) {
+  .sign-up-btn {
+    margin-top: 50px;
+  }
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Responsive styling from original CSS */
+@media (min-width: 992px) and (max-width: 1024px) {
+  .orb-text {
+    left: 22%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .orb-text {
+    left: 15%;
+  }
+  .features-parent {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .features-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .orb-text {
+    /* left: 10%; */
+    left: 29%;
+  }
+  .mob-Features {
+    display: block;
+  }
+  .feature-content {
+    display: none;
+  }
+  .featur-animation {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .features-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .orb-text {
+    left: 10%;
+  }
+  .orb-text h2 {
+    font-size: 28px;
+  }
+  .mob-Features {
+    display: block;
+  }
+  .feature-content {
+    display: none;
+  }
+  .featur-animation {
+    position: relative;
+    top: 0;
+  }
+  .sign-up-btn {
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

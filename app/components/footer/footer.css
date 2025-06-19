@@ -1,0 +1,77 @@
+.footer-parent {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  color: #fff;
+  padding: 50px 0px;
+}
+.foot-pent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.follow-icons {
+  padding-bottom: 25px;
+}
+.social-media {
+  margin-top: 10px;
+}
+.follow-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-copyright {
+  background: #1a2333;
+  padding: 10px;
+}
+.footer-copyright p {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.footer-copyright p span {
+  font-weight: 500;
+}
+.foot-t1 p {
+  padding-top: 10px;
+  font-weight: 400;
+  max-width: 464px;
+  line-height: 27px;
+}
+.foot-t2 h2 {
+  font-weight: 700;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.nav-items-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+.nav-items-footer li a {
+  font-weight: 400;
+}
+.foot-t3 h2 {
+  font-weight: 700;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.follow-icons p {
+  font-weight: 400;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .footer-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .footer-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+}

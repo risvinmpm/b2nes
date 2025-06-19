@@ -1,0 +1,186 @@
+.parent-connect {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+.connect-us {
+  padding: 5rem 0rem 3rem 0rem;
+  padding: 5rem 0rem 10rem 0rem;
+  color: #fff;
+}
+.contact-us-form {
+  background: radial-gradient(
+      137.58% 137.58% at 39.64% 87.28%,
+      #0f172a 0%,
+      #1e293b 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 2px 7px 57px 0px #00000047;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 30px 24px;
+  position: relative;
+  /* width: 470px; */
+  width: 100%;
+  background: #0f172a24;
+  box-shadow: 2px 7px 57px 0px #00000047;
+  backdrop-filter: blur(10px);
+}
+.left-connect {
+  padding-top: 30px;
+}
+.left-connect h2 {
+  font-weight: 700;
+  font-size: 30px;
+  max-width: 375px;
+  padding-bottom: 10px;
+}
+.react-tel-input .country-list {
+  background: #151c2e !important;
+}
+.react-tel-input .country-list .country.highlight,
+.react-tel-input .country-list .country:hover {
+  background-color: #101522 !important;
+}
+.react-tel-input .country-list {
+  background: #151c2e !important;
+}
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.highlight {
+  background-color: #101522 !important;
+}
+
+.connectpara {
+  font-weight: 400;
+  max-width: 480px;
+}
+.coonecting-media {
+  padding-top: 40px;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+.call {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+.heading h2 {
+  font-weight: 700;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+.heading p {
+  font-weight: 400;
+  padding-bottom: 35px;
+}
+.name-field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.email-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.name-field input {
+  border: none;
+  border-bottom: 1px solid #2a3956;
+  padding: 10px 0px;
+  outline: none;
+}
+.name-field input::placeholder {
+  font-weight: 400;
+  color: #2a3956;
+}
+.name-field label {
+  font-weight: 400;
+  font-size: 15px;
+}
+.textareafield label {
+  padding-bottom: 10px;
+}
+.textareafield textarea {
+  border: none;
+  border-bottom: 1px solid #2a3956;
+  padding: 10px 0px;
+  outline: none;
+}
+.textareafield textarea::placeholder {
+  font-weight: 400;
+  color: #2a3956;
+}
+.submit-btn {
+  display: flex;
+  justify-content: end;
+}
+.location svg {
+  color: #ac6bb7;
+}
+.coonecting-media svg {
+  color: #ac6bb7;
+}
+.contactimg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .parent-connect {
+    grid-template-columns: 1fr;
+  }
+  .connectpara {
+    max-width: 365px;
+  }
+  .email-phone {
+    align-items: baseline;
+    width: 100%;
+    gap: 0px;
+    display: grid;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .parent-connect {
+    grid-template-columns: 1fr;
+  }
+  .connectpara {
+    max-width: 365px;
+  }
+  .email-phone {
+    align-items: baseline;
+    width: 100%;
+    gap: 0px;
+    display: grid;
+  }
+  /* .contact-us-form {
+    width: 316px;
+  } */
+  .left-connect h2 {
+    font-size: 28px;
+  }
+  .connect-us {
+    padding: 3rem 0rem 5rem 0rem;
+  }
+  .globe-animat {
+    display: none;
+  }
+  .submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
