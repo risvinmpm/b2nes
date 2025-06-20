@@ -258,8 +258,6 @@ body {
 
 @media (min-width: 300px) and (max-width: 575px) {
   .container {
-    /* max-width: 316px; */
-    /* max-width: 350px; */
     padding-left: 30px;
     padding-right: 30px;
   }
