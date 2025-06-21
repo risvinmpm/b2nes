@@ -19,61 +19,60 @@ const Success = () => {
     {
       title: "Expert Guidance",
       description:
-        "Benefit from real-time advice from our experienced professionals to refine your strategies.",
+        "Benefit from real-time advice from our experienced professionals to refine your strategies."
     },
     {
       title: "Collaborative Community",
       description:
-        "Join a vibrant community of traders and share insights, tips, and growth strategies.",
+        "Join a vibrant community of traders and share insights, tips, and growth strategies."
     },
     {
       title: "Innovative Tools",
       description:
-        "Access state-of-the-art tools designed to enhance your trading efficiency and results.",
+        "Access state-of-the-art tools designed to enhance your trading efficiency and results."
     },
     {
       title: "24/7 Support",
       description:
-        "Our dedicated team is here around the clock to assist you with any queries or technical issues.",
+        "Our dedicated team is here around the clock to assist you with any queries or technical issues."
     },
     {
       title: "Continuous Learning",
       description:
-        "Participate in workshops, webinars, and tutorials to constantly upgrade your trading knowledge.",
-    },
+        "Participate in workshops, webinars, and tutorials to constantly upgrade your trading knowledge."
+    }
   ];
 
   const content = [
     {
       title: "Expert Guidance",
       description:
-        "Benefit from real-time advice from our experienced professionals to refine your strategies.",
+        "Benefit from real-time advice from our experienced professionals to refine your strategies."
     },
     {
       title: "Collaborative Community",
       description:
-        "Join a vibrant community of traders and share insights, tips, and growth strategies.",
+        "Join a vibrant community of traders and share insights, tips, and growth strategies."
     },
     {
       title: "Innovative Tools",
       description:
-        "Access state-of-the-art tools designed to enhance your trading efficiency and results.",
+        "Access state-of-the-art tools designed to enhance your trading efficiency and results."
     },
     {
       title: "24/7 Support",
       description:
-        "Our dedicated team is here around the clock to assist you with any queries or technical issues.",
+        "Our dedicated team is here around the clock to assist you with any queries or technical issues."
     },
     {
       title: "Continuous Learning",
       description:
-        "Participate in workshops, webinars, and tutorials to constantly upgrade your trading knowledge.",
+        "Participate in workshops, webinars, and tutorials to constantly upgrade your trading knowledge."
     },
     {
       title: "Legally Compliant Brokerage Services",
-      description:
-        "Trade confidently under Dubai's strict regulatory framework",
-    },
+      description: "Trade confidently under Dubai's strict regulatory framework"
+    }
   ];
 
   return (
@@ -83,11 +82,12 @@ const Success = () => {
           <div className="successed-screen">
             <div className="container">
               <div className="succees-content">
+                {/* <ZeroGravityText selector=".anime-header, .anime-text" splitBy="letters" /> */}
                 <Copy>
-                  <h2>Succeed Together with B2NES</h2>
+                  <h2 className="anime-header">Succeed Together with B2NES</h2>
                 </Copy>
                 <Copy>
-                  <p>
+                  <p className="anime-text">
                     At B2NES, we believe in the power of collaboration. Our
                     trading environment is built to help you grow
                   </p>
@@ -146,7 +146,7 @@ const Success = () => {
                     const section = document.getElementById("connectus");
                     section?.scrollIntoView({
                       behavior: "smooth",
-                      block: "start",
+                      block: "start"
                     });
                   }}
                 />
@@ -199,8 +199,8 @@ const Success = () => {
                 </div>
               </div>
             </div>
+            <div id="about"></div>
           </div>
-
           {/* Platform Section */}
           <div className="platform-sec">
             <Image className="left-shade-img" src={leftshade} alt="" />
@@ -255,13 +255,13 @@ const Success = () => {
                   linear-gradient(180deg, #AA35DE 0%, #6D0D97 100%),
                   radial-gradient(176.93% 652.76% at 94.32% 6.17%, rgba(85, 51, 100, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
                   linear-gradient(0deg, rgba(189, 148, 201, 0.2), rgba(189, 148, 201, 0.2))`,
-                    backgroundBlendMode: "overlay",
+                    backgroundBlendMode: "overlay"
                   }}
                   onClick={() => {
                     const section = document.getElementById("connectus");
                     section?.scrollIntoView({
                       behavior: "smooth",
-                      block: "start",
+                      block: "start"
                     });
                   }}
                 />

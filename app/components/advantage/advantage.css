@@ -182,13 +182,15 @@
   color: #fff;
   overflow: visible;
   padding-bottom: 100vh; /* ADD THIS */
+  max-width: 1300px !important;
+  width: 1300px !important;
 }
 
 
 .cards {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
   width: 300px;
   height: 360px;
   perspective: 1000px;
