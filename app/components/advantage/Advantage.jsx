@@ -14,6 +14,7 @@ import card1 from "../../asset/card1.png";
 import card2 from "../../asset/card2.png";
 import card3 from "../../asset/card3.png";
 import card4 from "../../asset/card4.png";
+// import card5 from "../../asset/card5.png";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,7 +49,7 @@ const Advantage = () => {
     //   frontTitle: "Credibility",
     //   backText:
     //     "Our AML and KYC compliance enhances your reputation, making you a trusted player in the market.",
-    //   icon: "../../assets/card5.png"
+    //   icon: card5
     // }
   ];
 
@@ -150,7 +151,7 @@ const Advantage = () => {
                   </p>
                 </Copy>
               </div>
-              <div className="advantage-card-grid mainContainer" ref={mainContainer}>
+              <div className="mainContainer" ref={mainContainer}>
                 {/* {flipCardsData.map((card, index) => (
                   <div key={index} className="grid-item">
                     <FlipCard {...card} />
