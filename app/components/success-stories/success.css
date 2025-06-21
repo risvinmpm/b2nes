@@ -1,3 +1,7 @@
+.pin-spacer {
+  padding: 0px !important;
+}
+
 .success-page {
   padding: 3rem 0rem 3rem 0rem;
   color: #fff;
@@ -347,9 +351,9 @@
   .mob-success-parent {
     display: block;
   }
-  .features-section1 {
+  /* .features-section1 {
     display: none;
-  }
+  } */
   .mob-success-item {
     border: 1px solid #80808021;
   }

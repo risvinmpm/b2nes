@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 const ZeroGravityText = ({ selector, splitBy }) => {
   const animatedElementsRef = useRef([]);
 
-  // Move handleMouseMove to outer scope
   const handleMouseMove = (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
@@ -34,67 +33,46 @@ const ZeroGravityText = ({ selector, splitBy }) => {
       const textContainers = document.querySelectorAll(selector);
 
       textContainers.forEach((textContainer) => {
+        const originalText = textContainer.textContent;
         let elements = [];
-        let elementType = "";
-
-        if (splitBy === "words") {
-          elements = textContainer.textContent.trim().split(/\s+/);
-          elementType = "word";
-        } else if (splitBy === "letters") {
-          const words = textContainer.textContent.trim().split(/\s+/);
-          words.forEach((word, wordIndex) => {
-            for (let i = 0; i < word.length; i++) {
-              elements.push(word[i]);
-            }
-            if (wordIndex < words.length - 1) {
-              elements.push(" ");
-            }
-          });
-          elementType = "letter";
-        }
-
         textContainer.textContent = "";
 
-        elements.forEach((element, index) => {
-          const span = document.createElement("span");
-          span.classList.add(elementType);
-          span.textContent = element;
-          textContainer.appendChild(span);
-
-          if (splitBy === "words" && index < elements.length - 1) {
-            textContainer.appendChild(document.createTextNode(" "));
+        if (splitBy === "words") {
+          elements = originalText.trim().split(/\s+/);
+        } else {
+          for (const char of originalText) {
+            elements.push(char);
           }
+        }
 
-          animatedElements.push({
-            element: span,
-            originalX: 0,
-            originalY: 0,
-            currentX: 0,
-            currentY: 0,
-            targetX: 0,
-            targetY: 0,
-          });
+        elements.forEach((char) => {
+          const span = document.createElement("span");
+          span.className = splitBy === "words" ? "word" : "letter";
+          span.textContent = char;
+          textContainer.appendChild(span);
         });
       });
 
-      // Save reference
+      const spans = document.querySelectorAll(`${selector} span`);
+      spans.forEach((span) => {
+        const rect = span.getBoundingClientRect();
+        animatedElements.push({
+          element: span,
+          originalX: rect.left + rect.width / 2,
+          originalY: rect.top + rect.height / 2,
+          currentX: 0,
+          currentY: 0,
+          targetX: 0,
+          targetY: 0,
+        });
+      });
+
       animatedElementsRef.current = animatedElements;
 
-      // Initial position setup
-      setTimeout(() => {
-        animatedElements.forEach((el) => {
-          const rect = el.element.getBoundingClientRect();
-          el.originalX = rect.left + rect.width / 2;
-          el.originalY = rect.top + rect.height / 2;
-        });
-      }, 100);
-
-      // Animation loop
       const animate = () => {
-        const lerpFactor = 0.1;
-        animatedElements.forEach((el) => {
-          el.currentX += (el.targetX - el.currentX) * lerpFactor;
-          el.currentY += (el.targetY - el.currentY) * lerpFactor;
+        animatedElementsRef.current.forEach((el) => {
+          el.currentX += (el.targetX - el.currentX) * 0.1;
+          el.currentY += (el.targetY - el.currentY) * 0.1;
           el.element.style.transform = `translate(${el.currentX}px, ${el.currentY}px)`;
         });
         requestAnimationFrame(animate);
@@ -104,7 +82,7 @@ const ZeroGravityText = ({ selector, splitBy }) => {
       animate();
     };
 
-    animateTextElements();
+    requestAnimationFrame(animateTextElements);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
