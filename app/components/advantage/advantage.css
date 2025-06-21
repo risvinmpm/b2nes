@@ -82,17 +82,16 @@
   }
 } */
 
-.flip-card {
+/* .flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center bottom;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-}
+} */
 
 .flip-card-inner {
   position: relative;
@@ -106,33 +105,32 @@
   -moz-backface-visibility: hidden;
 }
 
-.flip-card:focus {
+/* .flip-card:focus {
   outline: 0;
-}
+} */
 
-.flip-card:hover .flip-card-inner,
+/* .flip-card:hover .flip-card-inner,
 .flip-card:focus .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
 
-.flip-card-front,
+/* .flip-card-front,
 .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 16px;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* Add this for iOS Safari */
-}
+  -webkit-backface-visibility: hidden;
+} */
 
 .flip-card-front {
-  /* background: linear-gradient(to left, #4364f7, #6fb1fc); */
   background: radial-gradient(
       79.28% 65.91% at 95.98% 0%,
       #1e293b 0%,
       #0f172a 100%
     )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+   ;
 
   color: #fff;
   z-index: 2;
@@ -144,13 +142,11 @@
 }
 
 .flip-card-back {
-  /* background: linear-gradient(to right, #4364f7, #6fb1fc); */
   background: radial-gradient(
       79.28% 65.91% at 95.98% 0%,
       #1e293b 0%,
       #0f172a 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    );
 
   color: white;
   transform: rotateY(180deg);
@@ -159,19 +155,18 @@
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  /* padding: 0px 15px; */
   padding: 0px 50px;
 }
 
 /* advantage.css */
-.custom-marquee {
+/* .custom-marquee {
   padding: 2rem 0 !important;
 }
 
 .marquee-item {
   margin-right: 1rem;
   flex-shrink: 0;
-}
+} */
 
 /* Ensure cards maintain fixed dimensions */
 .container {
@@ -179,36 +174,27 @@
   height: 100%;
 }
 
-section {
+.card-stack-wrapper {
   position: relative;
   width: 100vw;
   height: 100vh;
   background-color: #0f172a;
   color: #fff;
+  overflow: visible;
+  padding-bottom: 100vh; /* ADD THIS */
 }
 
-.hero h1,
-.footer h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 28px;
-  text-align: center;
-  font-weight: 700;
-  max-width: 720px;
-  line-height: 1.4;
-}
 
 .cards {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   width: 300px;
   height: 360px;
   perspective: 1000px;
   transform: translate(-50%, -50%);
 }
+
 
 .card-wrapper {
   position: relative;
@@ -239,14 +225,14 @@ section {
   padding: 20px;
 }
 
-.flip-card-front {
+/* .flip-card-front {
   background: radial-gradient(
     79.28% 65.91% at 95.98% 0%,
     #1e293b 0%,
     #0f172a 100%
   );
   z-index: 2;
-}
+} */
 
 .flip-card-front h2 {
   font-size: 20px;
@@ -254,7 +240,7 @@ section {
   margin-top: 10px;
   text-align: center;
 }
-
+/* 
 .flip-card-back {
   background: radial-gradient(
     79.28% 65.91% at 95.98% 0%,
@@ -264,7 +250,7 @@ section {
   transform: rotateY(180deg);
   font-size: 16px;
   text-align: center;
-}
+} */
 
 @keyframes floating {
   0% {
@@ -298,7 +284,7 @@ section {
 .flip-card {
   will-change: transform;
   backface-visibility: hidden;
-}
+} */
 .shade-img {
   position: absolute;
   top: 0px;
@@ -309,7 +295,7 @@ section {
 .flip-card:focus .shade-img {
   display: none;
 }
-.shade-img-bottom {
+/* .shade-img-bottom {
   position: absolute;
   bottom: 0px;
   z-index: 1;
@@ -326,7 +312,7 @@ section {
 } */
 
 /* slider */
-.swiper-container {
+/* .swiper-container {
   position: relative;
   width: 100%;
   padding: 0 0px;
@@ -384,7 +370,7 @@ section {
 .swiper-button-next:after {
   font-size: 14px !important;
   color: #fff;
-}
+} */
 
 @media (min-width: 300px) and (max-width: 575px) {
   .flip-card-front h2 {
@@ -393,9 +379,9 @@ section {
   .advantage-contents h2 {
     font-size: 26px;
   }
-  .flip-card {
+  /* .flip-card {
     width: 100%;
     position: relative;
     z-index: 999;
-  }
+  } */
 }
