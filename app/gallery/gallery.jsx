@@ -15,18 +15,18 @@ const videoData = [
   {
     id: 1,
     thumbnail: videoimg,
-    embedUrl: "https://www.youtube.com/embed/wjPu-pwM-yc",
+    embedUrl: "https://www.youtube.com/embed/wjPu-pwM-yc"
   },
   {
     id: 2,
     thumbnail: menimg, // Replace with actual thumbnail images for videos
-    embedUrl: "https://www.youtube.com/embed/lrv9uSrMdl0",
+    embedUrl: "https://www.youtube.com/embed/lrv9uSrMdl0"
   },
   {
     id: 3,
     thumbnail: videoimg, // Replace with actual thumbnail images for videos
-    embedUrl: "https://www.youtube.com/embed/WY7cv8lmTSA",
-  },
+    embedUrl: "https://www.youtube.com/embed/WY7cv8lmTSA"
+  }
 ];
 
 const Gallery = () => {
@@ -55,15 +55,17 @@ const Gallery = () => {
       <div className="container">
         <div className="video-section">
           <p>Video </p>
-          <div className="videos">
+          <div className="videos grid grid-cols-4 gap-5">
             {/* <Image src={videoimg} alt="" /> */}
-            <a
-              href="https://www.youtube.com/@ghazibentounes9490"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={videoimg} alt="YouTube Channel" />
-            </a>
+            <div>
+              <a
+                href="https://www.youtube.com/@ghazibentounes9490"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image src={videoimg} alt="YouTube Channel" className="w-full h-full object-cover" />
+              </a>
+            </div>
             {videoData.map((video) => (
               <div
                 key={video.id}
@@ -74,6 +76,7 @@ const Gallery = () => {
                   src={video.thumbnail}
                   alt={`Video ${video.id}`}
                   layout="responsive"
+                  className="w-full h-full object-cover"
                 />
                 <div className="play-button">▶</div>
               </div>
@@ -82,18 +85,19 @@ const Gallery = () => {
         </div>
         <div className="photo-section">
           <p>Photo</p>
-          <div className="photos">
+          <div className="photos grid grid-cols-4 gap-5">
             {photoImages.map((img, index) => (
               <Image
                 key={index}
                 src={img}
                 alt={`photo-${index}`}
-                style={{
-                  borderRadius: "10px",
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "171px!important",
-                }}
+                className="w-full h-full rounded-2xl object-cover"
+                // style={{
+                //   borderRadius: "10px",
+                //   objectFit: "cover",
+                //   width: "100%",
+                //   height: "171px!important"
+                // }}
               />
             ))}
           </div>

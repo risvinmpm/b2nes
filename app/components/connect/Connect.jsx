@@ -11,7 +11,7 @@ import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import ReactLenis from "@studio-freight/react-lenis";
 import Copy from "../common/Copy";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 const Connect = () => {
   const [formData, setFormData] = useState({
